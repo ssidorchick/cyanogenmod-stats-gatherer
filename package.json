@@ -1,0 +1,14 @@
+{
+  "name": "cyanogenmod-stats-gatherer",
+  "version": "0.1.0",
+  "description": "",
+  "main": "gatherer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergey Sidorchick",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.34.0"
+  }
+}

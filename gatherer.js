@@ -1,7 +1,6 @@
 var request = require('request'),
     CronJob = require('cron').CronJob,
     mongoose = require('mongoose'),
-    _ = require('underscore'),
     VersionConverter = require('./converters/version'),
     Version = require('./models/version'),
     url = 'http://stats.cyanogenmod.org/api?method=get_counts';

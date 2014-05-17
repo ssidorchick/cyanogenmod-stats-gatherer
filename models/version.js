@@ -8,4 +8,4 @@ var versionSchema = new Schema({
 
 var Version = mongoose.model('Version', versionSchema);
 
-exports.Version = Version;
+module.exports = Version;

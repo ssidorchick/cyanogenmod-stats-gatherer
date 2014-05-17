@@ -1,18 +1,11 @@
 var request = require('request'),
     CronJob = require('cron').CronJob,
     mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
     _ = require('underscore'),
+    Version = require('./models/version').Version,
     url = 'http://stats.cyanogenmod.org/api?method=get_counts';
 
 mongoose.connect('mongodb://localhost/cyanogenmod');
-
-var versionSchema = new Schema({
-  timestamp: { type: Date, default: Date.now },
-  statistics: [{ name: String, downloads: Number, _id: false }]
-});
-
-var Version = mongoose.model('Version', versionSchema);
 
 var getVersions = function(rawData) {
   var data = JSON.parse(rawData);
